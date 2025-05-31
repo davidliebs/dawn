@@ -1,0 +1,128 @@
+<div class="tw-container tw-mx-auto tw-px-6 tw-py-32 -tw-z-10">
+  <div class="tw-mx-auto tw-mb-16 tw-space-y-12 tw-text-center">
+    <span class="tw-text-lg tw-font-semibold tw-tracking-widest tw-text-gray-500 tw-uppercase">
+      {{ section.settings.section_label }}
+    </span>
+    <h2 class="tw-my-0 tw-text-4xl tw-font-bold tw-text-gray-900 md:tw-text-5xl">
+      {{ section.settings.section_heading }}
+    </h2>
+    <p class="tw-mx-auto tw-text-xl tw-max-w-5xl tw-w-full tw-text-gray-600 tw-leading-normal">
+      {{ section.settings.section_description }}
+    </p>
+  </div>
+
+  <div class="tw-relative tw-mx-auto tw-max-w-3xl">
+    <!-- Vertical line -->
+    <div
+      class="tw-absolute tw-left-4 tw-h-full tw--translate-x-1/2 tw-transform tw-bg-gray-200 tw-w-1 tw-rounded md:tw-left-1/2"
+    >
+      <div></div>
+    </div>
+
+    <div class="tw-space-y-12">
+      {% for block in section.blocks %}
+        {% assign mod = forloop.index0 | modulo: 2 %}
+        {% if mod == 0 %}
+          <div class="tw-relative tw-justify-between tw-pl-12 md:tw-flex md:tw-pl-0 md:tw-flex-row tw-items-start tw-gap-8">
+            <!-- Year -->
+            <div class="md:tw-w-1/4 md:tw-pt-2 md:tw-text-right md:tw-pr-8">
+              <span class="tw-text-sm tw-text-center tw-from-electric-blue-300 tw-to-electric-blue-700 tw-inline-block tw-rounded-full tw-bg-gradient-to-br tw-px-6 tw-py-2 tw-font-black tw-text-white">
+                {{ block.settings.year }}
+              </span>
+            </div>
+
+            <div
+              class="tw-bg-electric-blue-500 tw-absolute tw-top-1 tw-left-0 tw-h-6 tw-w-6 -tw-translate-x-1/2 tw-transform tw-rounded-full tw-border-solid tw-border-4 tw-border-gray-100 md:tw-left-1/2"
+            >
+              <div></div>
+            </div>
+
+            <!-- Content -->
+            <div class="tw-mt-4 tw-rounded-lg tw-border-gray-200 tw-border tw-border-solid tw-bg-white tw-p-6 md:tw-mt-0 md:tw-w-3/4">
+              <h3 class="tw-mb-2 tw-text-xl tw-font-bold tw-text-black">{{ block.settings.title }}</h3>
+              <p class="tw-text-gray-600 tw-leading-snug">{{ block.settings.description }}</p>
+            </div>
+          </div>
+        {% else %}
+          <div class="tw-relative tw-justify-between tw-pl-12 md:tw-flex md:tw-pl-0 md:tw-flex-row-reverse tw-items-start tw-gap-8">
+            <!-- Year -->
+            <div class="tw-text-sm md:tw-w-1/4 md:tw-pt-2 md:tw-text-right md:tw-pr-8">
+              <span class="tw-text-center tw-font-black tw-from-electric-blue-300 tw-to-electric-blue-700 tw-inline-block tw-rounded-full tw-bg-gradient-to-br tw-px-6 tw-py-2 tw-text-white">
+                {{ block.settings.year }}
+              </span>
+            </div>
+
+            <div
+              class="tw-bg-electric-blue-500 tw-absolute tw-top-1 tw-left-0 tw-h-6 tw-w-6 -tw-translate-x-1/2 tw-transform tw-rounded-full tw-border-solid tw-border-4 tw-border-gray-100 md:tw-left-1/2"
+            >
+              <div></div>
+            </div>
+
+            <!-- Content -->
+            <div class="tw-mt-4 tw-rounded-lg tw-bg-white tw-p-6 tw-border tw-border-solid tw-border-gray-200 md:tw-mt-0 md:tw-w-3/4">
+              <h3 class="tw-mb-2 tw-text-xl tw-font-bold tw-text-black">{{ block.settings.title }}</h3>
+              <p class="tw-text-gray-600 tw-leading-snug">{{ block.settings.description }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Legacy Timeline",
+  "tag": "section",
+  "class": "bg-white py-24",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_label",
+      "label": "Section Label",
+      "default": "Our Story"
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "From Mendoza to the World"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Section Description",
+      "default": "What began in Diego Fernández's small workshop is now a global movement - uniting athletes through craftsmanship and the spirit of the wolf."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "timeline_item",
+      "name": "Timeline Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "year",
+          "label": "Year"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Legacy Timeline",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

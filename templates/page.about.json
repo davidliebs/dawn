@@ -1,0 +1,103 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-about": {
+      "type": "about-section",
+      "blocks": {
+        "hero_Y8wAmM": {
+          "type": "hero",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "style": "image-to-side",
+            "image_order": "right",
+            "separator": true,
+            "image_order_reversed_on_mobile": false,
+            "image": "shopify://shop_images/deigo.jpg",
+            "title": "FIERO HISTORY",
+            "subtitle": "Born in Argentina. Engineered for champions worldwide.",
+            "description": "We craft performance sportswear that moves with you, on and off the field. Powered by innovation, inspired by our Argentinian heritage."
+          }
+        },
+        "hero_WGpgGb": {
+          "type": "hero",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "style": "image-to-side",
+            "image_order": "left",
+            "separator": true,
+            "image_order_reversed_on_mobile": false,
+            "image": "shopify://shop_images/rolling-hills-on-farm-land.jpg",
+            "title": "LEGACY",
+            "subtitle": "From the Andes to the World",
+            "description": "Founded in 1982 in the rugged foothills of the Andes, Fiero Sport began with a fierce mission: to craft padel performance wear that carried not just function - but fire, story, and spirit.\n<br><br>\n\nAt the heart of Fiero Sport is Diego “El Lobo” Fernández, a padel pioneer who believed the game deserved more than just equipment. Inspired by the strength, instinct, and unity of wolves, Diego envisioned a brand that would empower players to lead with passion and play with heart.\n<br><br>\n\nFrom a small workshop in Mendoza to a global community of athletes, Fiero Sport has grown into a movement - a legacy-driven performance brand where South American heritage meets modern, minimal sport-meets-style design. Our commitment remains unchanged: to create exceptional sportswear that embodies resilience, purpose, and the relentless spirit of champions."
+          }
+        }
+      },
+      "block_order": [
+        "hero_Y8wAmM",
+        "hero_WGpgGb"
+      ],
+      "settings": {}
+    },
+    "features": {
+      "type": "features-section",
+      "blocks": {
+        "performance_item_xaz3ja": {
+          "type": "performance_item",
+          "settings": {
+            "icon": "shopify://shop_images/tree-icon.svg",
+            "title": "Breathability",
+            "description": "Our fabrics are engineered to maximize airflow, keeping you cool during the most intense workouts."
+          }
+        },
+        "performance_item_d9rgnQ": {
+          "type": "performance_item",
+          "settings": {
+            "icon": "shopify://shop_images/tree-icon.svg",
+            "title": "Moisture Control",
+            "description": "Advanced wicking technology pulls sweat away from your body, ensuring comfort in any condition."
+          }
+        },
+        "performance_item_wFmYFq": {
+          "type": "performance_item",
+          "settings": {
+            "icon": "shopify://shop_images/tree-icon.svg",
+            "title": "Temperature Regulation",
+            "description": "Adaptive materials that work with your body's natural heat management system."
+          }
+        },
+        "performance_item_JKm7iG": {
+          "type": "performance_item",
+          "settings": {
+            "icon": "shopify://shop_images/tree-icon.svg",
+            "title": "Durability",
+            "description": "Rigorously tested to maintain performance through countless training sessions and washes."
+          }
+        }
+      },
+      "block_order": [
+        "performance_item_xaz3ja",
+        "performance_item_d9rgnQ",
+        "performance_item_wFmYFq",
+        "performance_item_JKm7iG"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "heading": "Performance Philosophy",
+        "subheading": "We believe exceptional performance comes from a perfect balance of innovation, quality materials, and understanding athletes' needs."
+      }
+    }
+  },
+  "order": [
+    "main-about",
+    "features"
+  ]
+}

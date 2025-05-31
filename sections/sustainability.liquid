@@ -1,0 +1,277 @@
+<div class="tw-min-h-screen tw-bg-white">
+  <section class="tw-bg-gradient-to-br tw-from-green-50 tw-to-blue-50 tw-py-32 tw-px-4">
+    <div class="tw-max-w-7xl tw-mx-auto tw-text-center tw-space-y-12">
+      <div class="tw-flex tw-justify-center">
+        <button class="tw-bg-electric-blue-100 tw-rounded-full tw-gap-x-2 tw-border-none tw-text-electric-blue-600 tw-p-10 tw-py-6 tw-text-lg tw-font-semibold tw-flex tw-items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-leaf-icon lucide-leaf"
+          >
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+          </svg>
+          {{ section.settings.tag_text }}
+        </button>
+      </div>
+      <h1 class="tw-text-5xl sm:tw-text-7xl md:tw-text-8xl tw-font-bold tw-text-gray-900 tw-my-0">
+        {{ section.settings.title }}
+        <span class="tw-text-electric-blue-500 tw-block">{{ section.settings.colored_title }}</span>
+      </h1>
+      <p class="tw-text-xl tw-text-gray-600 tw-max-w-3xl tw-mx-auto tw-leading-snug tw-mb-12">
+        {{ section.settings.subtext }}
+      </p>
+    </div>
+  </section>
+
+  <section class="tw-py-16 tw-px-4 tw-bg-black">
+    <div class="tw-max-w-7xl tw-mx-auto">
+      <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-8">
+        {% for block in section.blocks %}
+          {% if block.type == 'statistic' %}
+            <div class="tw-text-center">
+              <h2
+                class="tw-text-4xl md:tw-text-6xl tw-font-bold tw-mb-2 tw-mt-0"
+                style="color: {{ block.settings.stat_color }};"
+              >
+                {{ block.settings.value }}
+              </h2>
+              <p class="tw-text-white tw-text-lg">{{ block.settings.label }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="tw-p-10 sm:tw-p-24 sm:tw-py-32 tw-bg-gradient-to-br tw-from-green-50 tw-to-blue-50">
+    <div class="tw-max-w-[1280px] tw-mx-auto">
+      <div class="tw-text-center tw-mb-16">
+        <h2 class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-gray-900 tw-mb-6 tw-mt-0">
+          {{ section.settings.initiatives_heading }}
+        </h2>
+        <p class="tw-text-xl tw-text-gray-600 tw-max-w-7xl tw-mx-auto tw-leading-snug">
+          {{ section.settings.initiatives_description }}
+        </p>
+      </div>
+
+      <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-16">
+        {% for block in section.blocks %}
+          {% if block.type == 'initiative_block' %}
+            <div class="tw-bg-white tw-p-10 tw-rounded-lg">
+              <div
+                class="tw-w-16 tw-h-16 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-mb-4"
+                style="background-color: {{ block.settings.icon_background_color }};"
+              >
+                <div
+                  class="tw-w-8 tw-h-8 tw-flex tw-items-center tw-justify-center"
+                >
+                  <img
+                    src="{{ block.settings.icon.src | image_url }}"
+                    width="24"
+                    height="24"
+                  >
+                </div>
+              </div>
+              <h3 class="tw-text-2xl tw-text-gray-900">{{ block.settings.title }}</h3>
+              <div class="tw-text-gray-600">
+                {{ block.settings.description }}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="tw-py-20 tw-px-10 tw-bg-gradient-to-r tw-from-electric-blue/5 tw-to-green-50">
+    <div class="tw-max-w-5xl md:tw-max-w-7xl tw-mx-auto">
+      <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 lg:tw-gap-24 tw-items-center">
+        <div>
+          <h2 class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-gray-900 tw-mb-6">
+            {{ section.settings.innovation_title }}
+            <span class="tw-text-electric-blue-500 tw-block">{{ section.settings.innovation_colored_title }}</span>
+          </h2>
+          <p class="tw-text-xl tw-text-gray-600 tw-mb-8 tw-leading-snug">
+            {{ section.settings.innovation_description }}
+          </p>
+        </div>
+        <img
+          src="{{ section.settings.featured_image.src | image_url }}"
+          class="tw-w-full tw-h-full tw-rounded-xl"
+          height=""
+          width=""
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="tw-py-36 tw-px-4 tw-bg-gray-900">
+    <div class="tw-max-w-4xl tw-mx-auto tw-text-center tw-space-y-12">
+      <h2 class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-white tw-my-0">
+        {{ section.settings.final_banner_title }}
+      </h2>
+      <p class="tw-text-xl tw-text-gray-300 tw-my-0">{{ section.settings.final_banner_description }}</p>
+      <div class="tw-flex tw-justify-center">
+        <a
+          href="{{ section.settings.final_banner_btn_link }}"
+          class="tw-bg-electric-blue-500 tw-no-underline tw-border-none hover:tw-bg-electric-blue-600 tw-text-white tw-px-8 tw-py-6 tw-text-lg tw-rounded-full"
+        >
+          {{ section.settings.final_banner_btn_text }}
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Sustainability Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tag_text",
+      "label": "Tag Text",
+      "default": "Fiero Future"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Sustainable"
+    },
+    {
+      "type": "text",
+      "id": "colored_title",
+      "label": "Colored Heading",
+      "default": "Sportswear"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Sub heading",
+      "default": "We're committed to creating high-performance athletic wear that doesn't compromise our planet's future. Every product we make is designed with sustainability at its core."
+    },
+    {
+      "type": "text",
+      "id": "initiatives_heading",
+      "label": "Initiatives Heading",
+      "default": "Our Green Initiatives"
+    },
+    {
+      "type": "textarea",
+      "id": "initiatives_description",
+      "label": "Initiatives Description",
+      "default": "From innovative materials to responsible manufacturing, we're pioneering sustainable practices across every aspect of our business."
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_image",
+      "label": "Featured Image"
+    },
+    {
+      "type": "text",
+      "id": "final_banner_title",
+      "label": "Final Banner Title",
+      "default": "Join the Movement"
+    },
+    {
+      "type": "textarea",
+      "id": "final_banner_description",
+      "label": "Final Banner Description",
+      "default": "Every purchase you make contributes to a more sustainable future. Together, we can make a difference."
+    },
+    {
+      "type": "text",
+      "id": "final_banner_btn_text",
+      "label": "Final Banner CTA Text",
+      "default": "Shop Sustainably"
+    },
+    {
+      "type": "url",
+      "id": "final_banner_btn_link",
+      "label": "Final Banner CTA Link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "innovation_title",
+      "label": "Innovation Heading",
+      "default": "Innovation Meets"
+    },
+    {
+      "type": "text",
+      "id": "innovation_colored_title",
+      "label": "Innovation Colored Heading",
+      "default": "Sustainability"
+    },
+    {
+      "type": "textarea",
+      "id": "innovation_description",
+      "label": "Innovation Description",
+      "default": "Our R&D team works tirelessly to develop breakthrough technologies that enhance performance while reducing environmental impact. From bio-based materials to zero-waste manufacturing, we're setting new standards for the industry."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "statistic",
+      "name": "Statistic",
+      "settings": [
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Statistic"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        },
+        {
+          "type": "color",
+          "id": "stat_color",
+          "label": "Statistic color"
+        }
+      ]
+    },
+    {
+      "type": "initiative_block",
+      "name": "Initiative Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "color",
+          "id": "icon_background_color",
+          "label": "Icon Background Color"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sustainability Section",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

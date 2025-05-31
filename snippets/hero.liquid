@@ -1,0 +1,104 @@
+{% if block.settings.style == 'background-image' %}
+  <div class="tw-relative tw-h-screen tw-flex tw-items-center tw-justify-center tw-overflow-hidden">
+    <div
+      class="tw-absolute tw-inset-0 tw-bg-cover tw-bg-center]"
+      style="background-image: url('{{ block.settings.image.src | image_url }}')"
+    >
+      <div></div>
+    </div>
+    {% comment %}
+      <div class="tw-absolute tw-inset-0 tw-bg-gradient-to-br tw-from-yellow-900 tw-to-yellow-600 tw-opacity-70">
+        <div></div>
+      </div>
+    {% endcomment %}
+
+    <div class="tw-relative tw-text-white tw-text-center tw-px-4 tw-max-w-[1024px] tw-mx-auto">
+      <h1 class="tw-text-5xl md:tw-text-7xl tw-font-bold tw-mb-6 tw-tracking-tight tw-text-white">
+        {% comment %} ELEVATE YOUR <span class="tw-text-electric-blue-400 tw-block">PERFORMANCE</span> {% endcomment %}
+        {{ block.settings.title }}
+      </h1>
+      <p class="tw-text-xl md:tw-text-2xl tw-mb-8 tw-max-w-[768px] tw-mx-auto tw-leading-normal">
+        {{ block.settings.subtitle }}
+      </p>
+      <div class="tw-h-[2px] tw-w-32 tw-bg-electric-blue-400 tw-mx-auto tw-mb-8 tw-rounded-full"><div></div></div>
+      <p class="tw-text-lg md:tw-text-xl tw-max-w-[672px] tw-mx-auto tw-mb-12 tw-leading-normal">
+        {{ block.settings.description }}
+      </p>
+    </div>
+  </div>
+{% else %}
+  <div
+    class="tw-relative tw-min-h-screen tw-flex tw-items-center tw-justify-center tw-overflow-hidden tw-p-10"
+    style="background-color: {{ block.settings.color_scheme.settings.background }};"
+  >
+    {% assign img_order = 1 %}
+    {% assign text_order = 2 %}
+
+    {% if block.settings.image_order_reversed_on_mobile %}
+      {% assign img_order = 2 %}
+      {% assign text_order = 1 %}
+    {% endif %}
+
+    <div
+      class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-12 md:tw-gap-24 tw-items-center"
+      style="color: {{ block.settings.color_scheme.settings.text }}"
+    >
+      {% if block.settings.image_order == 'right' %}
+        <div class="tw-relative tw-text-start tw-px-4 tw-max-w-[1024px] tw-mx-auto tw-order-{{ text_order }} md:tw-order-1">
+          <h1 class="tw-text-5xl md:tw-text-7xl tw-font-bold tw-mb-6 tw-tracking-tight tw-text-inherit">
+            {{ block.settings.title }}
+          </h1>
+          <p class="tw-text-xl md:tw-text-2xl tw-mb-8 tw-max-w-[768px] tw-mx-auto tw-leading-normal">
+            {{ block.settings.subtitle }}
+          </p>
+          {% if block.settings.separator %}
+            <div
+              class="tw-h-[2px] tw-w-32 tw-mb-8 tw-rounded-full"
+              style="background-color: {{ block.settings.separator_color }}"
+            >
+              <div></div>
+            </div>
+          {% endif %}
+          <p class="tw-text-lg md:tw-text-xl tw-max-w-[672px] tw-mx-auto tw-mb-12 tw-leading-relaxed">
+            {{ block.settings.description }}
+          </p>
+        </div>
+
+        <div class="tw-relative tw-h-[600px] tw-w-full tw-overflow-hidden tw-rounded-lg tw-shadow-xl tw-order-{{ img_order }} md:tw-order-2">
+          <img
+            src="{{ block.settings.image.src | image_url }}"
+            alt="Argentinian workshop"
+            class="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
+            width=""
+            height=""
+          >
+        </div>
+      {% else %}
+        <div class="tw-relative tw-h-[600px] tw-w-full tw-overflow-hidden tw-rounded-lg tw-shadow-xl tw-order-{{ img_order }} md:tw-order-1">
+          <img
+            src="{{ block.settings.image.src | image_url }}"
+            alt="Argentinian workshop"
+            class="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
+            width=""
+            height=""
+          >
+        </div>
+
+        <div class="tw-relative tw-text-start tw-px-4 tw-max-w-[1024px] tw-mx-auto tw-order-{{ text_order }} md:tw-order-2">
+          <h1 class="tw-text-5xl md:tw-text-7xl tw-font-bold tw-mb-6 tw-tracking-tight tw-text-inherit">
+            {{ block.settings.title }}
+          </h1>
+          <p class="tw-text-xl md:tw-text-2xl tw-mb-8 tw-max-w-[768px] tw-mx-auto tw-leading-normal">
+            {{ block.settings.subtitle }}
+          </p>
+          {% if block.settings.separator %}
+            <div class="tw-h-[2px] tw-w-32 tw-bg-electric-blue-400 tw-mb-8 tw-rounded-full"><div></div></div>
+          {% endif %}
+          <p class="tw-text-lg md:tw-text-xl tw-max-w-[672px] tw-mx-auto tw-mb-12 tw-leading-relaxed">
+            {{ block.settings.description }}
+          </p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

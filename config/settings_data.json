@@ -1,5 +1,324 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-  "current": "Default",
+  "current": {
+    "logo": "shopify://shop_images/logo.webp",
+    "logo_width": 90,
+    "favicon": "shopify://shop_images/logo.webp",
+    "type_header_font": "assistant_n4",
+    "heading_scale": 100,
+    "type_body_font": "assistant_n4",
+    "body_scale": 100,
+    "page_width": 1200,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 8,
+    "spacing_grid_vertical": 8,
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 0,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 4,
+    "buttons_shadow_blur": 5,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 55,
+    "variant_pills_radius": 40,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 4,
+    "variant_pills_shadow_blur": 5,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 55,
+    "inputs_radius": 0,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_blur": 5,
+    "card_style": "standard",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "scheme-2",
+    "card_border_thickness": 0,
+    "card_border_opacity": 10,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
+    "card_shadow_horizontal_offset": 0,
+    "card_shadow_vertical_offset": 4,
+    "card_shadow_blur": 5,
+    "collection_card_style": "standard",
+    "collection_card_image_padding": 0,
+    "collection_card_text_alignment": "left",
+    "collection_card_color_scheme": "scheme-2",
+    "collection_card_border_thickness": 0,
+    "collection_card_border_opacity": 10,
+    "collection_card_corner_radius": 0,
+    "collection_card_shadow_opacity": 0,
+    "collection_card_shadow_horizontal_offset": 0,
+    "collection_card_shadow_vertical_offset": 4,
+    "collection_card_shadow_blur": 5,
+    "blog_card_style": "standard",
+    "blog_card_image_padding": 0,
+    "blog_card_text_alignment": "left",
+    "blog_card_color_scheme": "scheme-2",
+    "blog_card_border_thickness": 0,
+    "blog_card_border_opacity": 10,
+    "blog_card_corner_radius": 0,
+    "blog_card_shadow_opacity": 0,
+    "blog_card_shadow_horizontal_offset": 0,
+    "blog_card_shadow_vertical_offset": 4,
+    "blog_card_shadow_blur": 5,
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 10,
+    "text_boxes_radius": 0,
+    "text_boxes_shadow_opacity": 0,
+    "text_boxes_shadow_horizontal_offset": 0,
+    "text_boxes_shadow_vertical_offset": 4,
+    "text_boxes_shadow_blur": 5,
+    "media_border_thickness": 1,
+    "media_border_opacity": 5,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "media_shadow_horizontal_offset": 0,
+    "media_shadow_vertical_offset": 4,
+    "media_shadow_blur": 5,
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 10,
+    "popup_corner_radius": 0,
+    "popup_shadow_opacity": 5,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 4,
+    "popup_shadow_blur": 5,
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 0,
+    "drawer_shadow_horizontal_offset": 0,
+    "drawer_shadow_vertical_offset": 4,
+    "drawer_shadow_blur": 5,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "scheme-5",
+    "sold_out_badge_color_scheme": "scheme-3",
+    "social_facebook_link": "",
+    "social_instagram_link": "",
+    "social_youtube_link": "",
+    "social_tiktok_link": "",
+    "social_twitter_link": "",
+    "social_snapchat_link": "",
+    "social_pinterest_link": "",
+    "social_tumblr_link": "",
+    "social_vimeo_link": "",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "currency_code_enabled": true,
+    "cart_type": "notification",
+    "show_vendor": false,
+    "show_cart_note": false,
+    "cart_drawer_collection": "",
+    "sections": {
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
+      },
+      "sustainability": {
+        "type": "sustainability",
+        "blocks": {
+          "initiative_block_aBYcGA": {
+            "type": "initiative_block",
+            "settings": {
+              "icon": "shopify://shop_images/tree-icon.svg",
+              "icon_background_color": "#18ff06",
+              "title": "Eco-Friendly Materials",
+              "description": "<p>We prioritize renewable, biodegradable, and recycled materials in every product we make. By reducing plastic use and sourcing responsibly, we aim to cut down waste and create items that are as gentle on the planet as they are on you.</p>"
+            }
+          },
+          "initiative_block_NHzhG7": {
+            "type": "initiative_block",
+            "settings": {
+              "icon": "shopify://shop_images/tree-icon.svg",
+              "icon_background_color": "#18ff06",
+              "title": "Renewable Energy",
+              "description": "<p>Our production facilities are powered by 100% renewable energy, including solar and wind. This shift has allowed us to dramatically reduce greenhouse gas emissions and set a new standard for clean manufacturing.</p>"
+            }
+          },
+          "initiative_block_HdVd9r": {
+            "type": "initiative_block",
+            "settings": {
+              "icon": "shopify://shop_images/tree-icon.svg",
+              "icon_background_color": "#18ff06",
+              "title": "Community Reforestation",
+              "description": "<p>For every product sold, we plant a tree in partnership with global reforestation initiatives. Together with our customers, we’ve helped restore natural habitats, support biodiversity, and fight climate change.</p>"
+            }
+          },
+          "statistic_yfAx9C": {
+            "type": "statistic",
+            "settings": {
+              "value": "75%",
+              "label": "Recycled Materials Used",
+              "stat_color": "#1ac61d"
+            }
+          },
+          "statistic_HzD89g": {
+            "type": "statistic",
+            "settings": {
+              "value": "50M",
+              "label": "Plastic Bottles Recycled",
+              "stat_color": "#5ed4ff"
+            }
+          },
+          "statistic_Qw6j3f": {
+            "type": "statistic",
+            "settings": {
+              "value": "100%",
+              "label": "Carbon Neutral Shipping",
+              "stat_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "initiative_block_aBYcGA",
+          "initiative_block_NHzhG7",
+          "initiative_block_HdVd9r",
+          "statistic_yfAx9C",
+          "statistic_HzD89g",
+          "statistic_Qw6j3f"
+        ],
+        "settings": {
+          "tag_text": "Fiero Future",
+          "title": "Sustainable",
+          "colored_title": "Sportswear",
+          "subtext": "We're committed to creating high-performance athletic wear that doesn't compromise our planet's future. Every product we make is designed with sustainability at its core.",
+          "initiatives_heading": "Our Green Initiatives",
+          "initiatives_description": "From innovative materials to responsible manufacturing, we're pioneering sustainable practices across every aspect of our business.",
+          "featured_image": "shopify://shop_images/rolling-hills-on-farm-land.jpg",
+          "final_banner_title": "Join the Movement",
+          "final_banner_description": "Every purchase you make contributes to a more sustainable future. Together, we can make a difference.",
+          "final_banner_btn_text": "Start Shopping Sustainably",
+          "final_banner_btn_link": "shopify://collections/all",
+          "innovation_title": "Innovation Meets",
+          "innovation_colored_title": "Sustainability",
+          "innovation_description": "Our R&D team works tirelessly to develop breakthrough technologies that enhance performance while reducing environmental impact. From bio-based materials to zero-waste manufacturing, we're setting new standards for the industry."
+        }
+      },
+      "about-section": {
+        "type": "about-section",
+        "blocks": {
+          "performance_item_3ffKE3": {
+            "type": "performance_item",
+            "settings": {
+              "icon": "shopify://shop_images/tree-icon.svg",
+              "title": "Breathability",
+              "description": "Our fabrics are engineered to maximize airflow, keeping you cool during the most intense workouts."
+            }
+          },
+          "performance_item_NwRqYF": {
+            "type": "performance_item",
+            "settings": {
+              "icon": "shopify://shop_images/tree-icon.svg",
+              "title": "Breathability",
+              "description": "Our fabrics are engineered to maximize airflow, keeping you cool during the most intense workouts."
+            }
+          },
+          "performance_item_8UT4K9": {
+            "type": "performance_item",
+            "settings": {
+              "icon": "shopify://shop_images/tree-icon.svg",
+              "title": "Breathability",
+              "description": "Our fabrics are engineered to maximize airflow, keeping you cool during the most intense workouts."
+            }
+          },
+          "performance_item_YkYPRE": {
+            "type": "performance_item",
+            "settings": {
+              "icon": "shopify://shop_images/tree-icon.svg",
+              "title": "Breathability",
+              "description": "Our fabrics are engineered to maximize airflow, keeping you cool during the most intense workouts."
+            }
+          }
+        },
+        "block_order": [
+          "performance_item_3ffKE3",
+          "performance_item_NwRqYF",
+          "performance_item_8UT4K9",
+          "performance_item_YkYPRE"
+        ],
+        "settings": {}
+      }
+    },
+    "content_for_index": [],
+    "color_schemes": {
+      "scheme-1": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-2": {
+        "settings": {
+          "background": "#f3f3f3",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#121212",
+          "button_label": "#f3f3f3",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-3": {
+        "settings": {
+          "background": "#242833",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#000000",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-4": {
+        "settings": {
+          "background": "#121212",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#121212",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-5": {
+        "settings": {
+          "background": "#334fb4",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#334fb4",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      }
+    }
+  },
   "presets": {
     "Default": {
       "logo_width": 90,

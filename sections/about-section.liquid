@@ -1,0 +1,94 @@
+{% schema %}
+{
+  "name": "About Section",
+  "blocks": [
+    {
+      "type": "hero",
+      "name": "Hero",
+      "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "Color Scheme",
+          "default": "scheme-1"
+        },
+        {
+          "type": "select",
+          "id": "style",
+          "label": "Select Hero Type",
+          "options": [
+            { "label": "Background image", "value": "background-image" },
+            { "label": "Image to the Side", "value": "image-to-side" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "image_order",
+          "label": "Image Order",
+          "default": "right",
+          "options": [
+            { "label": "Left", "value": "left" },
+            { "label": "Right", "value": "right" }
+          ]
+        },
+        { "type": "checkbox", "id": "separator", "label": "Separator", "default": true },
+        { "type": "color", "id": "separator_color", "label": "Separator Color", "default": "#29b6f6" },
+        {
+          "type": "checkbox",
+          "id": "image_order_reversed_on_mobile",
+          "label": "Mobile Order Reversed",
+          "info": "Image order reversed on mobile?",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "subtitle"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "performance_item",
+      "name": "Performance Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% for block in section.blocks %}
+  {% if block.type == 'hero' %}
+    {% render 'hero', block: block, color_scheme: section.settings.color_scheme %}
+  {% endif %}
+{% endfor %}
